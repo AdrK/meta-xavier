@@ -1,0 +1,19 @@
+diff --git a/arch/arm/boot/dts/stm32mp157c-dk2.dts b/arch/arm/boot/dts/stm32mp157c-dk2.dts
+index 20a86f1..f5a64f6 100644
+--- a/arch/arm/boot/dts/stm32mp157c-dk2.dts
++++ b/arch/arm/boot/dts/stm32mp157c-dk2.dts
+@@ -142,4 +142,14 @@
+ 		compatible = "brcm,bcm43438-bt";
+ 		max-speed = <3000000>;
+ 	};
++	
++&i2c5 {
++        pinctrl-names = "default", "sleep";
++        pinctrl-0 = <&i2c5_pins_a>;
++        pinctrl-1 = <&i2c5_pins_sleep_a>;
++	status = "okay";
++        i2c-scl-rising-time-ns = <185>;
++        i2c-scl-falling-time-ns = <20>;
++};
++
+ };

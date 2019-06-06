@@ -1,0 +1,16 @@
+diff --git a/arch/arm/boot/dts/stm32mp157c-dk2.dts b/arch/arm/boot/dts/stm32mp157c-dk2.dts
+index 20a86f1..033bb9e 100644
+--- a/arch/arm/boot/dts/stm32mp157c-dk2.dts
++++ b/arch/arm/boot/dts/stm32mp157c-dk2.dts
+@@ -143,3 +143,11 @@
+ 		max-speed = <3000000>;
+ 	};
+ };
++
++&i2c5 {
++	mpu9250@68 {
++		compatible = "invensense,mpu9250";
++		reg = <0x68>;
++		};
++};
++
