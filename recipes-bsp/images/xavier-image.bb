@@ -104,12 +104,13 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-eclipse-debug         \
     \
     \
-    ${IMAGE_DISPLAY_PART}       \
-    ${IMAGE_MM_PART}            \
-    \
-    ${IMAGE_QT_MANDATORY_PART}  \
-    ${IMAGE_QT_OPTIONAL_PART}   \
-    ${IMAGE_QT_EXAMPLES_PART}   \
-    ${IMAGE_QT_APPS_PART}   \
-    "
+"
+#    ${IMAGE_DISPLAY_PART}       \
+#    ${IMAGE_MM_PART}            \
+#    \
+#    ${IMAGE_QT_MANDATORY_PART}  \
+#    ${IMAGE_QT_OPTIONAL_PART}   \
+#    ${IMAGE_QT_EXAMPLES_PART}   \
+#    ${IMAGE_QT_APPS_PART}   \
+#    "
 
