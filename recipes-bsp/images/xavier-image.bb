@@ -79,7 +79,6 @@ IMAGE_QT_APPS_PART = " \
     demo-b2clock \
     "
 
-
 # INSTALL addons
 #
 CORE_IMAGE_EXTRA_INSTALL += " \
@@ -103,6 +102,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     \
     packagegroup-core-eclipse-debug         \
     \
+    hello-mod \
     \
 "
 #    ${IMAGE_DISPLAY_PART}       \
