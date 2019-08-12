@@ -2,15 +2,10 @@ SUMMARY = "Simple image"
 LICENSE = "Proprietary"
 
 include recipes-st/images/st-image.inc
-
 inherit core-image distro_features_check
 inherit populate_sdk_qt5
 
-# let's make sure we have a good image..
-CONFLICT_DISTRO_FEATURES = "x11 wayland"
-
 IMAGE_LINGUAS = "en-us"
-
 IMAGE_FEATURES += "package-management ssh-server-dropbear hwcodecs"
 
 # Define to null ROOTFS_MAXSIZE to avoid partition size restriction
@@ -103,14 +98,18 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-eclipse-debug         \
     \
     hello-mod \
+    u-boot-stm32mp-extlinux \
     \
+    ${IMAGE_DISPLAY_PART}       \
+    ${IMAGE_MM_PART}            \
+    \
+    ${IMAGE_QT_MANDATORY_PART}  \
+    ${IMAGE_QT_OPTIONAL_PART}   \
+    ${IMAGE_QT_EXAMPLES_PART}   \
+    ${IMAGE_QT_APPS_PART}   \
 "
-#    ${IMAGE_DISPLAY_PART}       \
-#    ${IMAGE_MM_PART}            \
-#    \
-#    ${IMAGE_QT_MANDATORY_PART}  \
-#    ${IMAGE_QT_OPTIONAL_PART}   \
-#    ${IMAGE_QT_EXAMPLES_PART}   \
-#    ${IMAGE_QT_APPS_PART}   \
-#    "
+
+IMAGE_FSTYPES += "${INITRAMFS_FSTYPES} \
+                  cpio.xz \
+"
 
