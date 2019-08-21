@@ -5,6 +5,9 @@ include recipes-st/images/st-image.inc
 inherit core-image distro_features_check
 inherit populate_sdk_qt5
 
+TOOLCHAIN_HOST_TASK += "nativesdk-cmake"
+TOOLCHAIN_TARGET_TASK += "libiio-dev"
+
 IMAGE_LINGUAS = "en-us"
 IMAGE_FEATURES += "package-management ssh-server-dropbear hwcodecs"
 
@@ -98,6 +101,8 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-eclipse-debug         \
     \
     hello-mod \
+    ncurses \
+    libiio \
     u-boot-stm32mp-extlinux \
     \
     ${IMAGE_DISPLAY_PART}       \
