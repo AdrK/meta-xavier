@@ -103,6 +103,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     hello-mod \
     ncurses \
     libiio \
+    lsof \
     u-boot-stm32mp-extlinux \
     \
     ${IMAGE_DISPLAY_PART}       \
